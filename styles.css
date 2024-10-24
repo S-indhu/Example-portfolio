@@ -1,0 +1,191 @@
+/* Basic CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #000; /* Background set to black */
+  color: #fff; /* All text set to white */
+}
+
+header {
+  background-color: #000; /* Header background black */
+  color: #fff;
+  text-align: center;
+  padding: 50px 0;
+}
+
+header h1 {
+  font-size: 3rem;
+  color: #ff0000; /* Title heading set to red */
+}
+
+header p {
+  font-size: 1.5rem;
+  color: #fff; /* Other text in header is white */
+}
+
+nav {
+  background-color: #333;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+  display: block;
+}
+
+nav ul li a:hover {
+  background-color: #ff0000; /* On hover, set to red */
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Section Styling */
+section {
+  margin: 50px 0;
+}
+
+h2 {
+  font-size: 2rem;
+  border-bottom: 2px solid #ff0000; /* Section heading border set to red */
+  padding-bottom: 10px;
+  color: #ff0000; /* Section headings set to red */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  padding: 10px 0;
+  color: #fff; /* List items set to white */
+}
+
+ul li strong {
+  color: #ff0000; /* Strong text set to red */
+}
+
+/* Skills Section */
+.skills-list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.skills-list div {
+  width: 30%;
+  padding: 20px;
+  background-color: #1e1e1e; /* Dark grey background for skill cards */
+  border-radius: 5px;
+  text-align: center;
+  color: #fff; /* White text for skills */
+}
+
+.skills-list h3 {
+  color: #ff0000; /* Skill titles set to red */
+}
+
+/* Project Section */
+.projects-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  width: 30%;
+  background-color: #1e1e1e; /* Dark grey background for project cards */
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3); /* Red shadow for project cards */
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-card h3 {
+  color: #ff0000; /* Project titles set to red */
+}
+
+/* Contact Section */
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #fff; /* Form labels set to white */
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #333; /* Dark background for inputs */
+  color: #fff; /* White text in inputs */
+}
+
+button {
+  background-color: #ff0000; /* Red button background */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e60000; /* Darker red on hover */
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #333; /* Dark footer background */
+  color: white; /* White footer text */
+}
+
+/* Smooth Scrolling Script */
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+      });
+  });
+});
